@@ -4,150 +4,146 @@ let currentMapUrl = '';
 // Itinerarios personalizados para cada paquete
 const itineraries = {
     itin1: `
-        <div class="accordion" id="itineraryAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Día 1: Llegada a Cusco y aclimatación
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>10:00 AM</strong> – Llegada al aeropuerto de Cusco, recepción y traslado al hotel.<br>
-                        <strong>11:00 AM</strong> – Check-in y tiempo libre para aclimatación.<br>
-                        <strong>02:00 PM</strong> – Almuerzo tradicional con coca tea.<br>
-                        <strong>04:00 PM</strong> – City Tour por Cusco: Plaza de Armas, Catedral, Qorikancha.<br>
-                        <strong>06:00 PM</strong> – Visita a Sacsayhuamán y centros ceremoniales.<br>
-                        <strong>08:00 PM</strong> – Cena de bienvenida y presentación del trekking.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Día 2: Inicio del Camino Inca - Wayllabamba
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>06:00 AM</strong> – Desayuno en el hotel.<br>
-                        <strong>07:00 AM</strong> – Traslado a Km 82, punto de inicio del Camino Inca.<br>
-                        <strong>08:30 AM</strong> – Comienzo del trekking, control de pasaportes.<br>
-                        <strong>12:30 PM</strong> – Almuerzo en Llactapata con vistas espectaculares.<br>
-                        <strong>04:00 PM</strong> – Llegada al campamento de Wayllabamba.<br>
-                        <strong>06:00 PM</strong> – Cena y explicación sobre la flora y fauna local.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Día 3: Paso de la Mujer Muerta - Wiñayhuayna
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>06:00 AM</strong> – Desayuno y preparación para el día más desafiante.<br>
-                        <strong>07:00 AM</strong> – Ascenso al paso de Warmiwañusca (4,215 msnm).<br>
-                        <strong>11:00 AM</strong> – Llegada al punto más alto, ceremonia de agradecimiento.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en Pacaymayu.<br>
-                        <strong>03:00 PM</strong> – Descenso hacia Wiñayhuayna.<br>
-                        <strong>06:00 PM</strong> – Cena y celebración por el logro del día.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Día 4: Inti Punku y Machu Picchu
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>05:00 AM</strong> – Desayuno y inicio de la caminata final.<br>
-                        <strong>06:30 AM</strong> – Llegada a Inti Punku (Puerta del Sol).<br>
-                        <strong>07:00 AM</strong> – Primera vista de Machu Picchu al amanecer.<br>
-                        <strong>09:00 AM</strong> – Tour guiado por Machu Picchu (2 horas).<br>
-                        <strong>11:30 AM</strong> – Tiempo libre para exploración personal.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en Aguas Calientes.<br>
-                        <strong>03:00 PM</strong> – Tren de regreso a Cusco.<br>
-                        <strong>07:00 PM</strong> – Cena de despedida en Cusco.
-                    </div>
+         <div class="accordion" id="itineraryAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Día 1: Exploración en Parque Nacional El Imposible
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>08:00 AM</strong> – Salida desde San Salvador hacia Parque Nacional El Imposible, Ahuachapán (3 h aprox.)<br>
+                    <strong>11:00 AM</strong> – Llegada y registro en el Centro de Visitantes El Imposible.<br>
+                    <strong>11:30 AM</strong> – Caminata guiada por el Sendero Los Enganches:<br>
+                    • Observación de flora y fauna tropical.<br>
+                    • Paradas en los miradores El Mulo y El León con vistas al océano Pacífico.<br>
+                    <strong>01:30 PM</strong> – Almuerzo típico en Restaurante El Mirador del Imposible<br>
+                    <strong>03:00 PM</strong> – Tour ecológico por el Mirador El Mulo y visita al Puente de Piedra.<br>
+                    <strong>05:30 PM</strong> – Retorno al alojamiento.<br>
+                    <strong>07:00 PM</strong> – Cena y fogata nocturna con bebidas típicas en Eco-Lodge San Benito (ubicado dentro del parque).<br>
+                    <strong>Noche</strong> en Eco-Lodge, Parque El Imposible.
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Día 2: Ruta El Naranjal
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>07:30 AM</strong> – Desayuno típico en el lodge<br>
+                    <strong>08:30 AM</strong> – Traslado hacia Tacuba (20 min).<br>
+                    <strong>09:00 AM</strong> – Inicio de recorrido guiado por la Ruta El Naranjal:<br>
+                    • Caminata hacia las Cascadas El Naranjal y El Bebedero.<br>
+                    • Baño en pozas naturales y tiempo para fotografías.<br>
+                    • Observación de aves tropicales con guía local.<br>
+                    <strong>12:30 PM</strong> – Almuerzo en Restaurante Entre Pinos<br>
+                    <strong>02:00 PM</strong> – Actividades opcionales:<br>
+                    • Tirolesa sobre el bosque (según condiciones del clima).<br>
+                    • Rappel en cascada El Bebedero.<br>
+                    • Descanso en hamacas y sesión fotográfica.<br>
+                    <strong>05:00 PM</strong> – Regreso al alojamiento en Tacuba.<br>
+                    <strong>07:00 PM</strong> – Cena en Café Tacuba, restaurante local reconocido por su cocina artesanal<br>
+                    <strong>Noche</strong> en Entre Pinos.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Día 3: Amanecer, sabores locales y despedida
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>06:00 AM</strong> – Caminata al amanecer por los senderos de Tacuba, con vistas a los volcanes de Ahuachapán.<br>
+                    <strong>07:30 AM</strong> – Desayuno en la posada<br>
+                    <strong>09:00 AM</strong> – Tiempo libre para compras de productos típicos<br>
+                    <strong>11:00 AM</strong> – Check-out y salida hacia San Salvador.<br>
+                    <strong>12:30 PM</strong> – Almuerzo de despedida en Restaurante Café Entre Nubes, en Concepción de Ataco (vista panorámica del Cerro de Apaneca).<br>
+                    <strong>02:30 PM</strong> – Continuación del viaje hacia San Salvador o aeropuerto.<br>
+                    <strong>04:30 PM</strong> – Fin del servicio.
+                </div>
+            </div>
+        </div>
+    </div>
     `,
     itin2: `
         <div class="accordion" id="itineraryAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Día 1: Bienvenida al paraíso maldivo
+                        Día 1: San Salvador → Cerro Verde
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>10:00 AM</strong> – Llegada al aeropuerto de Malé, bienvenida con cóctel de coco.<br>
-                        <strong>11:00 AM</strong> – Traslado en lancha ecológica al resort.<br>
-                        <strong>12:30 PM</strong> – Check-in en villa sobre el agua.<br>
-                        <strong>01:00 PM</strong> – Almuerzo de bienvenida en restaurante sobre el agua.<br>
-                        <strong>03:00 PM</strong> – Tour por el resort y presentación de programas de conservación.<br>
-                        <strong>05:00 PM</strong> – Primera sesión de snorkel en el arrecife de la casa.<br>
-                        <strong>07:00 PM</strong> – Cena bajo las estrellas en playa privada.
+                        <strong>06:00 AM</strong> – Salida desde el Centro Histórico en transporte privado.<br>
+                        <strong>08:00 AM</strong> – Llegada al complejo del área natural protegida Los Volcanes (Santa Ana).<br>
+                        <strong>08:00 AM a 09:30 AM</strong> – Inicio de caminata guiada al cráter del Volcán Ilamatepec (nivel moderado).<br>
+                        <strong>09:30 AM a 09:50 AM</strong> – Tiempo para fotografías en el cráter.<br>
+                        <strong>09:50 AM a 11:40 AM</strong> – Descenso del volcán y llegada a Cerro Verde.<br>
+                        <strong>11:40 AM a 12:00 PM</strong> – Descanso para cambiarse, ir al baño, etc.<br>
+                        <strong>12:00 PM a 01:00 PM</strong> – Almuerzo en Los Volcanes Bistro Café.<br>
+                        <strong>01:00 PM a 04:00 PM</strong> – Recorrido guiado por senderos del parque y miradores (caminata suave).<br>
+                        <strong>04:00 PM a 05:00 PM</strong> – Traslado y llegada a Bosques del Tibet.<br>
+                        <strong>05:00 PM a 06:30 PM</strong> – Check-in en el hotel e instalación en las habitaciones.<br>
+                        <strong>06:30 PM a 08:00 PM</strong> – Cena en el Hotel.<br>
+                        <strong>08:00 PM</strong> – Descanso.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Día 2: Conservación marina y vida submarina
+                        Día 2: Cerro Verde → volcán de Izalco
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>07:00 AM</strong> – Yoga al amanecer en el muelle.<br>
-                        <strong>08:00 AM</strong> – Desayuno buffet orgánico.<br>
-                        <strong>09:30 AM</strong> – Participación en programa de plantación de corales.<br>
-                        <strong>11:00 AM</strong> – Buceo con tiburones nodriza (para certificados).<br>
-                        <strong>01:00 PM</strong> – Almuerzo en isla desierta privada.<br>
-                        <strong>03:00 PM</strong> – Kayak de mar por manglares.<br>
-                        <strong>05:00 PM</strong> – Taller sobre conservación de tortugas marinas.<br>
-                        <strong>07:00 PM</strong> – Cena temática de mariscos sostenibles.
+                        <strong>07:00 AM a 08:00 AM</strong> – Desayuno en restaurante Bosques del Tibet.<br>
+                        <strong>08:00 AM a 08:40 AM</strong> – Salida y llegada a Izalco.<br>
+                        <strong>08:40 AM a 11:00 AM</strong> – Recorrido guiado por el centro de Izalco (vistas al volcán).<br>
+                        <strong>11:00 AM a 12:00 PM</strong> – Espacio para comprar artesanías.<br>
+                        <strong>12:00 PM a 01:30 PM</strong> – Almuerzo local en Izalco.<br>
+                        <strong>01:30 PM a 03:00 PM</strong> – Salida y llegada a Apaneca.<br>
+                        <strong>03:00 PM a 04:00 PM</strong> – Check-in en las cabañas de Apaneca y acomodación en la habitación.<br>
+                        <strong>04:00 PM a 06:00 PM</strong> – Caminata por Apaneca.<br>
+                        <strong>06:00 PM a 07:00 PM</strong> – Cena en Rata Touille.<br>
+                        <strong>07:00 PM a 08:00 PM</strong> – Tiempo para disfrutar de la noche de Apaneca.<br>
+                        <strong>08:00 PM</strong> – Descanso.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Día 3: Cultura local y experiencias sostenibles
+                        Día 3: Laguna Verde y Regreso a San Salvador
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>08:00 AM</strong> – Desayuno con vistas al océano.<br>
-                        <strong>09:30 AM</strong> – Visita a isla local de pescadores.<br>
-                        <strong>11:00 AM</strong> – Taller de artesanía con materiales reciclados del mar.<br>
-                        <strong>01:00 PM</strong> – Almuerzo tradicional maldivo en familia local.<br>
-                        <strong>03:00 PM</strong> – Tour por centro de rehabilitación de vida marina.<br>
-                        <strong>05:00 PM</strong> – Relajación en spa con tratamientos naturales.<br>
-                        <strong>07:00 PM</strong> – Cena de despedida y ceremonia de agradecimiento al océano.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Día 4: Aventura final y despedida
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>06:30 AM</strong> – Observación de delfines al amanecer.<br>
-                        <strong>08:00 AM</strong> – Desayuno especial de despedida.<br>
-                        <strong>09:30 AM</strong> – Última sesión de snorkel en el arrecife.<br>
-                        <strong>11:00 AM</strong> – Tiempo libre para fotos y recuerdos.<br>
-                        <strong>01:00 PM</strong> – Check-out y traslado al aeropuerto.<br>
-                        <strong>03:00 PM</strong> – Vuelo de regreso con certificado de embajador ambiental.
+                        <strong>07:00 AM a 08:30 AM</strong> – Desayuno en el Hotel.<br>
+                        <strong>08:30 AM a 09:00 AM</strong> – Salida y llegada a Laguna Verde.<br>
+                        <strong>09:00 AM a 10:00 AM</strong> – Caminata guiada por los alrededores de la Laguna Verde.<br>
+                        <strong>10:00 AM a 12:00 PM</strong> – Tours en cuatrimoto y lancha por la laguna.<br>
+                        <strong>12:00 PM a 12:30 PM</strong> – Regreso a Apaneca.<br>
+                        <strong>12:30 PM a 01:30 PM</strong> – Almuerzo en Café Albania.<br>
+                        <strong>01:30 PM a 02:00 PM</strong> – Regreso al hotel y salida.<br>
+                        <strong>02:00 PM a 04:00 PM</strong> – Salida y llegada al centro histórico.<br>
+                        <br>
+                        <strong>Incluye:</strong><br>
+                        • Transporte privado<br>
+                        • Hospedaje<br>
+                        • Alimentación completa<br>
+                        • Caminata guiada al volcán de Santa Ana<br>
+                        • Tours por Cerro Verde<br>
+                        • Recorrido por Izalco<br>
+                        • Tours en cuatrimoto y lancha en Laguna Verde<br>
+                        • Entradas a todos los parques
                     </div>
                 </div>
             </div>
@@ -158,71 +154,84 @@ const itineraries = {
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Día 1: Llegada a Kyoto - Tradiciones milenarias
+                        Día 1: San Salvador - Flores, Peten
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>10:00 AM</strong> – Llegada a Kyoto, recepción en ryokan tradicional.<br>
-                        <strong>11:00 AM</strong> – Check-in y ceremonia del té de bienvenida.<br>
-                        <strong>01:00 PM</strong> – Almuerzo kaiseki con ingredientes locales y orgánicos.<br>
-                        <strong>03:00 PM</strong> – Templo Kinkaku-ji (Pabellón Dorado) y jardines zen.<br>
-                        <strong>05:00 PM</strong> – Templo Ryoan-ji y meditación guiada.<br>
-                        <strong>07:00 PM</strong> – Cena en restaurante de agricultura local sostenible.
+                        <strong>06:00 AM</strong> Salida temprano en transporte terrestre privado<br>
+                        <strong>09:00 AM</strong> Cruce fronterizo en Anguiatú <br>
+                        <strong>12:00 PM</strong> Almuerzo durante la ruta.<br>
+                        <strong>01:00 PM</strong> Llegada a Flores (Petén) y check-in en hotel.<br>
+                        <strong></strong> Tarde libre para recorrer la Isla de Flores.<br>
+                        <strong>07:00 PM</strong> Cena en restaurante local .
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Día 2: Artesanía y cultura sostenible
+                        Día 2: Lago Petén Itzá
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>08:00 AM</strong> – Desayuno tradicional japonés.<br>
-                        <strong>09:30 AM</strong> – Taller de cerámica con maestros artesanos locales.<br>
-                        <strong>11:30 AM</strong> – Visita a taller de textiles de seda sostenible.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en restaurante vegetariano budista.<br>
-                        <strong>03:00 PM</strong> – Templo Kiyomizu-dera y calles históricas de Higashiyama.<br>
-                        <strong>05:00 PM</strong> – Taller de furoshiki (envoltura tradicional reutilizable).<br>
-                        <strong>07:00 PM</strong> – Cena y experiencia en onsen (baños termales).
+                        <strong>08:00 AM</strong> – Desayuno en el Hotel.<br>
+                        <strong>09:30 AM</strong> – Tour en lancha por el Lago Petén Itzá.<br>
+                        <strong>11:30 AM</strong> – Visita a Playa El Remate y miradores.<br>
+                        <strong>01:00 PM</strong> – Almuerzo Tipico.<br>
+                        <strong>03:00 PM</strong> – Opcional: visita al Zoológico ARCAS o Museo de la Isla<br>
+                        <strong>07:00 PM</strong> – Cena y descanso.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Día 3: Naturaleza y espiritualidad
+                        Día 3: Parque Nacional Tikal
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>07:00 AM</strong> – Meditación matutina en templo silencioso.<br>
-                        <strong>08:30 AM</strong> – Desayuno macrobiótico.<br>
-                        <strong>10:00 AM</strong> – Bosque de bambú de Arashiyama.<br>
-                        <strong>11:30 AM</strong> – Templo Tenryu-ji y jardín paisajista.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en restaurante de granja a mesa.<br>
-                        <strong>03:00 PM</strong> – Reserva de monos de Arashiyama (observación ética).<br>
-                        <strong>05:00 PM</strong> – Taller de caligrafía japonesa.<br>
-                        <strong>07:00 PM</strong> – Cena de despedida con geishas (opcional cultural).
+                        <strong>07:00 AM</strong> – Desayuno.<br>
+                        <strong>08:00 AM</strong> – Excursión guiada a Tikal (entrada + guía).<br>
+                        <strong>12:00 PM</strong> – Caminata por las ruinas y observación de fauna<br>
+                        <strong>12:30 AM</strong> – Almuerzo dentro del Parque<br>
+                        <strong>03:00 PM</strong> – Regreso a Flores por la tarde<br>
+                        <strong>07:00 PM</strong> – Cena y descanso.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Día 4: Comunidad y despedida consciente
+                        Día 4: Flores-Laguna Lachuá
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>09:00 AM</strong> – Desayuno y check-out.<br>
-                        <strong>10:30 AM</strong> – Mercado Nishiki y productos orgánicos locales.<br>
-                        <strong>12:00 PM</strong> – Taller de cocina sostenible con chef local.<br>
-                        <strong>02:00 PM</strong> – Almuerzo con platos preparados en el taller.<br>
-                        <strong>04:00 PM</strong> – Tiempo libre para compras de artesanías sostenibles.<br>
-                        <strong>06:00 PM</strong> – Traslado al aeropuerto con certificado de viajero consciente.
+                        <strong>07:00 AM</strong> – Desayuno.<br>
+                        <strong>08:00 AM</strong> – Traslado hacia Laguna Lachuá (aprox. 4 horas).<br>
+                        <strong>12:00 PM</strong> – Caminata ecológica (4 km) hasta la laguna.<br>
+                        <strong>12:30 AM</strong> – Almuerzo Tipo Picnic<br>
+                        <strong>01:00 PM</strong> – Disfrute de la laguna (baño, fotos, naturaleza).<br>
+                        <strong>03:00 PM</strong> – Hospedaje en cabañas rústicas dentro del parque<br>
+                        <strong>07:00 PM</strong> – Cena.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Día 5: Laguna Lachuá - San Salvador
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
+                    <div class="accordion-body">
+                        <strong>07:00 AM</strong> – Desayuno.<br>
+                        <strong>08:00 AM</strong> – Regreso hacia San Salvador (aprox. 8 horas).<br>
+                        <strong>12:00 PM</strong> – Almuerzo en Ruta<br>
+                        <strong>03:00 PM</strong> – Llegada por la tarde<br>
                     </div>
                 </div>
             </div>
@@ -302,170 +311,113 @@ const itineraries = {
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Día 1: Bienvenida a la biodiversidad costarricense
+                        Día 1: Salida desde San Salvador hacia Río Dulce.
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>10:00 AM</strong> – Llegada al aeropuerto Juan Santamaría, bienvenida con jugo de frutas tropicales.<br>
-                        <strong>11:00 AM</strong> – Traslado a lodge ecológico en la zona de Arenal.<br>
-                        <strong>01:00 PM</strong> – Check-in y almuerzo familiar con vista al volcán.<br>
-                        <strong>03:00 PM</strong> – Tour por jardín de mariposas y ranario.<br>
-                        <strong>04:30 PM</strong> – Canopy familiar seguro para todas las edades.<br>
-                        <strong>06:00 PM</strong> – Cuentacuentos sobre la naturaleza local.<br>
-                        <strong>07:30 PM</strong> – Cena buffet con ingredientes orgánicos locales.
+                        <strong>01:00 AM</strong> – Hora de Salida desde Gasolinera Puma Palermo(San Salvador)<br>
+                        <strong>08:00 AM</strong> – Llegadad a Rio Dulce.<br>
+                        <strong>08:15 AM</strong> – Desayuno recomendado: Restaurante "Backpackers" frente al rí<br>
+                        <strong>09:00 AM - 03:00 PM</strong> – Tour en lancha.<br>
+                        <strong>07:30 PM</strong> – Cena local.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Día 2: Volcanes, aguas termales y aventura
+                        Día 2: Tikal
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
-                        <strong>07:30 AM</strong> – Desayuno familiar con vista al volcán Arenal.<br>
-                        <strong>09:00 AM</strong> – Sendero por el parque nacional Volcán Arenal.<br>
-                        <strong>11:00 AM</strong> – Observación de aves y vida silvestre con guías expertos.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en restaurante con vistas al lago Arenal.<br>
-                        <strong>03:00 PM</strong> – Aguas termales familiares con toboganes.<br>
-                        <strong>05:00 PM</strong> – Taller de chocolate orgánico (los niños pueden participar).<br>
-                        <strong>07:00 PM</strong> – Cena temática y noche de juegos ecológicos.
+                        <strong>06:00 AM</strong> – Salida hacia las Flores.<br>
+                        <strong>07:00 AM</strong> – Desayuno en ruta: Restaurante "La Galería" en Isla de Flores.<br>
+                        <strong>07:30 AM</strong> – Traslado a Tikal<br>
+                        <strong>08:30 AM</strong> – Entrada a Tikal.<br>
+                        <strong>09:00 AM - 01:00 PM</strong> – Tour guiado: Templos I, II, IV, Mundo Perdido, Acrópolis.<br>
+                        <strong>03:00 PM</strong> – Regreso a Flores. <br>
+                        <strong>07:00 PM</strong> – Cena en el hospedaje.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Día 3: Reserva biológica y vida silvestre
+                        Día 3: Regreso a San Salvador
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
                     <div class="accordion-body">
                         <strong>08:00 AM</strong> – Desayuno y check-out.<br>
-                        <strong>09:30 AM</strong> – Traslado a reserva biológica privada.<br>
-                        <strong>10:30 AM</strong> – Safari fotográfico en búsqueda de perezosos, monos y tucanes.<br>
-                        <strong>12:30 PM</strong> – Almuerzo campestre en la reserva.<br>
-                        <strong>02:30 PM</strong> – Plantación de árboles nativos (actividad familiar).<br>
-                        <strong>04:00 PM</strong> – Visita a centro de rescate de animales.<br>
-                        <strong>06:00 PM</strong> – Cena de despedida y certificado de guardián de la naturaleza.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Día 4: Cultura local y despedida sostenible
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>09:00 AM</strong> – Visita a escuela local sostenible.<br>
-                        <strong>10:30 AM</strong> – Taller de artesanía con materiales reciclados.<br>
-                        <strong>12:00 PM</strong> – Almuerzo con familia campesina local.<br>
-                        <strong>02:00 PM</strong> – Tiempo libre para compras de souvenirs ecológicos.<br>
-                        <strong>04:00 PM</strong> – Traslado al aeropuerto.<br>
-                        <strong>06:00 PM</strong> – Vuelo de regreso con kit de semillas nativas.
+                        <strong>09:30 AM</strong> – Salida de las Flores<br>
+                        <strong>12:30 PM</strong> – Almuerzo en Ruta : Restaurante "El Establo" en Chiquimula.<br>
+                        <strong>04:00 PM</strong> – Llegada a San Salvador.<br>
                     </div>
                 </div>
             </div>
         </div>
     `,
     itin6: `
-        <div class="accordion" id="itineraryAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Día 1: Marrakech - La ciudad roja
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>09:00 AM</strong> – Llegada a Marrakech, té de bienvenida con hierbas locales.<br>
-                        <strong>10:00 AM</strong> – Check-in en riad sostenible con jardín interior.<br>
-                        <strong>11:30 AM</strong> – Tour por Medina y zocos con guía local.<br>
-                        <strong>01:00 PM</strong> – Almuerzo en restaurante de cooperativa de mujeres.<br>
-                        <strong>03:00 PM</strong> – Visita a taller de artesanía con apoyo a comunidades.<br>
-                        <strong>05:00 PM</strong> – Jardín Majorelle y museo Berber.<br>
-                        <strong>07:00 PM</strong> – Cena tradicional con música en vivo.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Día 2: Montañas del Atlas y comunidades bereberes
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>08:00 AM</strong> – Desayuno tradicional con pan recién horneado.<br>
-                        <strong>09:00 AM</strong> – Excursión a las montañas del Atlas.<br>
-                        <strong>11:00 AM</strong> – Visita a cooperativa de aceite de argán (sostenible).<br>
-                        <strong>01:00 PM</strong> – Almuerzo en casa de familia bereber.<br>
-                        <strong>03:00 PM</strong> – Caminata por valles con vistas espectaculares.<br>
-                        <strong>05:00 PM</strong> – Taller de alfombras con artesanas locales.<br>
-                        <strong>07:00 PM</strong> – Cena bajo las estrellas en kasbah tradicional.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Día 3: Esencia del desierto sostenible
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>07:00 AM</strong> – Desayuno y partida hacia el desierto.<br>
-                        <strong>09:00 AM</strong> – Visita a proyecto de conservación de gacelas.<br>
-                        <strong>11:30 AM</strong> – Llegada a campamento ecológico del desierto.<br>
-                        <strong>01:00 PM</strong> – Almuerzo con ingredientes del desierto.<br>
-                        <strong>03:00 PM</strong> – Paseo en camellos responsable (sin explotación animal).<br>
-                        <strong>05:00 PM</strong> – Taller de astronomía beduina.<br>
-                        <strong>07:00 PM</strong> – Cena alrededor del fuego con música tradicional.<br>
-                        <strong>Noche</strong> en tienda de campaña ecológica confortable.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Día 4: Essaouira - Costa atlántica
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>07:00 AM</strong> – Amanecer en el desierto y desayuno.<br>
-                        <strong>09:00 AM</strong> – Traslado a Essaouira (ciudad costera).<br>
-                        <strong>11:30 AM</strong> – Tour por la medina y puerto pesquero.<br>
-                        <strong>01:00 PM</strong> – Almuerzo de pescado fresco sostenible.<br>
-                        <strong>03:00 PM</strong> – Visita a cooperativa de mujeres pescadoras.<br>
-                        <strong>05:00 PM</strong> – Tiempo libre para disfrutar de la playa.<br>
-                        <strong>07:00 PM</strong> – Cena en restaurante con productos locales.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Día 5: Regreso consciente a Marrakech
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#itineraryAccordion">
-                    <div class="accordion-body">
-                        <strong>08:00 AM</strong> – Desayuno en la costa.<br>
-                        <strong>10:00 AM</strong> – Traslado de regreso a Marrakech.<br>
-                        <strong>12:00 PM</strong> – Visita a jardín secreto y taller de cerámica.<br>
-                        <strong>01:30 PM</strong> – Almuerzo de despedida en restaurante sostenible.<br>
-                        <strong>03:00 PM</strong> – Tiempo libre para compras finales.<br>
-                        <strong>05:00 PM</strong> – Traslado al aeropuerto.<br>
-                        <strong>07:00 PM</strong> – Vuelo de regreso con certificado de viajero responsable.
-                    </div>
+       <div class="accordion" id="itineraryAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Día 1: De San Salvador a Ecoparque Santa Rita
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>6:00 AM</strong> – Salida desde Gasolinera Shell boulevard de los héroes.<br>
+                    <strong>8:00 AM</strong> – Check-in en el hotel 1961 Los Naranjos Hotel y asignación de cuartos.<br>
+                    <strong>8:30 AM</strong> – Desayuno en el hotel.<br>
+                    <strong>9:00 AM</strong> – Traslado al complejo de Santa Rita Ecoparque.<br>
+                    <strong>9:30 AM</strong> – Visita guiada por los senderos del Ecoparque, paisajismo y avistamiento de flora y fauna silvestre.<br>
+                    <strong>11:00 AM</strong> – Descanso y toma de fotos.<br>
+                    <strong>11:30 AM</strong> – Almuerzo en la localidad vecinal.<br>
+                    <strong>1:00 PM</strong> – Vistas del pez lagarto en El zanjón El chino en Santa Rita y visita al refugio de caimanes.<br>
+                    <strong>5:00 PM</strong> – Regreso al hotel.<br>
+                    <strong>6:00 PM</strong> – Cena y posterior descanso.
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Día 2: Al Manglar barra de Santiago
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>7:00 AM - 8:00 AM</strong> – Desayuno en hotel 1961 Los Naranjos Hotel.<br>
+                    <strong>8:00 AM - 8:30 AM</strong> – Traslado a la barra de Santiago.<br>
+                    <strong>8:30 AM - 12:00 PM</strong> – Paseo en lancha y avistamiento de cocodrilos, aves y naturaleza.<br>
+                    <strong>12:00 PM</strong> – Almuerzo en local cercano.<br>
+                    <strong>1:30 PM</strong> – Salida y llegada a la bocana, tour guiados por el estero, manglares y bancos de arena.<br>
+                    <strong>4:00 PM</strong> – Check in en Mar de Oro beach house Hotel en playa los limones.<br>
+                    <strong>5:00 PM - 8:00 PM</strong> – Cena, caminata por la playa y fogata.<br>
+                    <strong>8:00 PM</strong> – Descanso.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Día 3: Amanecer en la playa y posterior Regreso a San Salvador
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#itineraryAccordion">
+                <div class="accordion-body">
+                    <strong>5:30 AM - 6:30 AM</strong> – Presenciar el amanecer en la playa.<br>
+                    <strong>6:30 AM - 8:00 AM</strong> – Desayuno en el hotel.<br>
+                    <strong>8:00 AM - 1:00 PM</strong> – Mañana de playa libre.<br>
+                    <strong>1:00 PM - 2:00 PM</strong> – Almuerzo en el hotel.<br>
+                    <strong>2:00 PM</strong> – Regreso a San Salvador.
+                </div>
+            </div>
+        </div>
+    </div>
     `
 };
 
@@ -528,12 +480,20 @@ function bookNow() {
     showToast('¡Reserva iniciada! Te contactaremos pronto.');
 }
 
-// Función para mostrar notificaciones toast
-function showToast(message) {
+// Reemplaza tu función showToast existente con esta
+function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
-    document.getElementById('toastMessage').textContent = message;
-    toast.classList.add('show');
+    const toastMessage = document.getElementById('toastMessage');
+    toastMessage.textContent = message;
     
+    // Cambia el color de fondo según el tipo
+    if (type === 'error') {
+        toast.style.background = '#f44336'; // Rojo para errores
+    } else {
+        toast.style.background = 'var(--primary-green)'; // Verde por defecto
+    }
+    
+    toast.classList.add('show');
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
@@ -598,7 +558,7 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 });
 
 // Menú móvil
-document.getElementById('mobileMenu').addEventListener('click', function() {
+document.getElementById('mobileMenuToggle').addEventListener('click', function() {
     const navLinks = document.getElementById('navLinks');
     if (navLinks.style.display === 'flex') {
         navLinks.style.display = 'none';
@@ -633,4 +593,278 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             }
         }
     });
+});
+
+// ===================================================================
+// CHATBOT BASADO EN REGLAS PARA GREEN TRAVEL
+// ===================================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // --- LÓGICA DE AUTENTICACIÓN (NUEVO) ---
+
+    const authButton = document.getElementById('authButton');
+    const userSection = document.getElementById('userSection');
+    const userMenuButton = document.getElementById('userMenuButton');
+    const userDropdownMenu = document.getElementById('userDropdownMenu');
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    const logoutLink = document.getElementById('logoutLink'); // Lo volvemos a definir
+    const authModal = document.getElementById('authModal');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    const authModalCloseBtn = document.getElementById('authModalCloseBtn');
+
+    if (authModalCloseBtn) {
+        authModalCloseBtn.addEventListener('click', function() {
+            console.log("¡El botón de cerrar ha sido clickeado!"); // Mensaje de depuración
+            hideAuthModal();
+        });
+     } else {
+        console.error("ERROR: No se encontró el botón con ID 'authModalCloseBtn'. Revisa el HTML.");
+        }
+
+        userMenuButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita que el clic se propague y cierre el menú inmediatamente
+        userSection.classList.toggle('show');
+    });
+
+    // Cerrar el menú si se hace clic en cualquier otro lugar de la página
+    document.addEventListener('click', function(event) {
+        if (!userSection.contains(event.target)) {
+            userSection.classList.remove('show');
+        }
+    });
+
+
+    // Comprobar si el usuario ya está logueado al cargar la página
+    checkLoginStatus();
+
+    // Event Listeners
+    authButton.addEventListener('click', showAuthModal);
+    logoutLink.addEventListener('click', handleLogout);
+    loginForm.addEventListener('submit', handleLogin);
+    registerForm.addEventListener('submit', handleRegister);
+
+    function checkLoginStatus() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            authButton.style.display = 'none';
+            userSection.style.display = 'flex';
+            usernameDisplay.textContent = loggedInUser;
+        } else {
+            authButton.style.display = 'block';
+            userSection.style.display = 'none';
+        }
+    }
+
+    function showAuthModal() {
+        authModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function hideAuthModal() {
+        authModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.username === username);
+
+        if (user && user.password === CryptoJS.SHA256(password).toString()) {
+            localStorage.setItem('loggedInUser', username);
+            showToast(`¡Bienvenido de nuevo, ${username}!`);
+            checkLoginStatus();
+            hideAuthModal();
+            loginForm.reset();
+        } else {
+            showToast('Usuario o contraseña incorrectos.', 'error');
+        }
+    }
+
+    function handleRegister(event) {
+        event.preventDefault();
+        const username = document.getElementById('registerUsername').value;
+        const password = document.getElementById('registerPassword').value;
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        if (users.some(u => u.username === username)) {
+            showToast('El nombre de usuario ya está en uso.', 'error');
+            return;
+        }
+
+        const hashedPassword = CryptoJS.SHA256(password).toString();
+        users.push({ username, password: hashedPassword });
+        localStorage.setItem('users', JSON.stringify(users));
+
+        showToast('¡Cuenta creada con éxito! Iniciando sesión...');
+        
+        // Auto-login after successful registration
+        localStorage.setItem('loggedInUser', username);
+        checkLoginStatus();
+        hideAuthModal();
+        registerForm.reset();
+    }
+
+    function handleLogout(event) {
+        event.preventDefault();
+        localStorage.removeItem('loggedInUser');
+        showToast('Has cerrado sesión correctamente.');
+        checkLoginStatus();
+    }
+
+    // Cerrar modal al hacer clic fuera de él
+    window.onclick = function(event) {
+        if (event.target === authModal) {
+            hideAuthModal();
+        }
+    }
+
+    // --- ELEMENTOS DEL DOM ---
+    const chatbotContainer = document.getElementById('chatbotContainer');
+    const chatbotBubble = document.getElementById('chatbotBubble');
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSendBtn = document.getElementById('chatbotSendBtn');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+    // --- FUNCIONES PRINCIPALES ---
+
+    // Toggle chatbot (abrir/cerrar)
+    chatbotBubble.addEventListener('click', () => {
+        chatbotContainer.classList.add('active');
+        chatbotBubble.classList.add('hidden');
+        chatbotInput.focus();
+    });
+
+    chatbotToggle.addEventListener('click', () => {
+        chatbotContainer.classList.remove('active');
+        chatbotBubble.classList.remove('hidden');
+    });
+
+    // Enviar mensaje
+    function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (message === '') return;
+
+        addMessage(message, 'user');
+        chatbotInput.value = '';
+        chatbotSuggestions.style.display = 'none';
+
+        showTypingIndicator();
+
+        setTimeout(() => {
+            removeTypingIndicator();
+            const response = generateBotResponse(message);
+            addMessage(response, 'bot');
+        }, 800); // Simula un pequeño retraso de "escritura"
+    }
+
+    chatbotSendBtn.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    // --- CEREBRO DEL CHATBOT (REGLAS Y RESPUESTAS) ---
+    function generateBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+
+        // Reglas para destinos específicos
+        if (lowerMessage.includes('el imposible') || lowerMessage.includes('naranjal') || lowerMessage.includes('parque')) {
+            return "Nuestro Tour al Parque Nacional El Imposible y Ruta El Naranjal es una aventura de 3 días en El Salvador. Ideal para amantes de la naturaleza y el senderismo. Incluye guías, alimentación y alojamiento ecológico por solo $235 por persona. ¡Te encantará!";
+        }
+        if (lowerMessage.includes('complejo volcanico') || lowerMessage.includes('volcan') || lowerMessage.includes('volcanes') || lowerMessage.includes('santa ana') || lowerMessage.includes('izalco')) {
+            return "Una de las mejores aventuras inovidables por los imponentes volcanes de Santa Ana e Izalco, ideal para los amantes de la naturalez, una aventura de 3 dias en El Salvador.";
+        }
+        if (lowerMessage.includes('lago') || lowerMessage.includes('laguna')) {
+            return "El Lago Petén Itzá y la Laguna Lachuá te invitan a descubrir dos paraísos naturales únicos en Guatemala. Petén Itzá sorprende con sus aguas turquesa, pueblos llenos de historia maya y paisajes que enamoran a primera vista, una aventura de 5 dias en hotel de prestigio con desayuno incluido.";
+        }
+        if (lowerMessage.includes('antigua') || lowerMessage.includes('hobbitenango') || lowerMessage.includes('historia')) {
+            return "La Ruta Mágica entre Antigua y Hobbitenango combina historia colonial con un mundo de fantasía. Son 3 días llenos de cultura y aventura en Guatemala por $480 por persona.";
+        }
+        if (lowerMessage.includes('Tikal') || lowerMessage.includes('castillo') || lowerMessage.includes('san felipe')) {
+            return "Tikal, Río Dulce y el Castillo de San Felipe forman un recorrido inolvidable por la historia, la naturaleza y la magia de Guatemala. Tikal te transporta al corazón del mundo maya con imponentes templos que emergen entre la selva y una energía ancestral que se siente en cada rincón, durante 3 dias, incluye desayuno y cena";
+        }
+        if (lowerMessage.includes('marruecos')) {
+            return "Las Rutas Sostenibles por El Salvador en el Ecoparque Santa Rita y disfruta de los manglares de Barra de Santiago. Son 3 días de relajacion por $309 por persona.";
+        }
+
+        // Reglas para categorías
+        if (lowerMessage.includes('Lago')) {
+            return "Si buscas Lagos, te recomiendo nuestro paraíso en el lago Petén Itzá y Laguna Lachuá.";
+        }
+        if (lowerMessage.includes('montaña') || lowerMessage.includes('aventura')) {
+            return "Para montaña y aventura, el Tour a El Imposible en El Salvador y la Aventura en Gigantes extremos son ideales. Ambos incluyen senderismo emocionante y vistas espectaculares.";
+        }
+        if (lowerMessage.includes('cultural') || lowerMessage.includes('ciudad')) {
+            return "Nuestras opciones culturales son fascinantes. Puedes explorar las tradiciones de Kyoto en Japón, la historia de Antigua Guatemala o los mercados de Marruecos. ¿Qué cultura te interesa más conocer?";
+        }
+        if (lowerMessage.includes('familiar') || lowerMessage.includes('familia')) {
+            return "¡Tenemos el paquete perfecto para ti! La Ruta Magica: Entre historia y fantasia está diseñada para todas las edades, con actividades seguras y divertidas.";
+        }
+        if (lowerMessage.includes('guatemala')) {
+            return "Si buscas salir un poco de la rutina Guatemala es un pais ideal para ello por eso te ofresemos los siguiente paquetes como El Lago Petén Itzá y Laguna Lachuá, La Escapada a Tikal y Ruta Mágica: Entre Historia y Fantasía.";
+        }
+        if (lowerMessage.includes('el salvador') || lowerMessage.includes('el salvador')){
+            return "Si desea descubrir un poco mas El Salvador tenemos los siguientes destionos que podrian interesarte como La Ruta Mistica: Tour Parque Nacional El Imposible y Ruta El Naranjal, Espejo Verde entre Gigantes Extremos y Conexión con la naturaleza verde y salvaje "
+        }
+        // Reglas generales
+        if (lowerMessage.includes('precio') || lowerMessage.includes('cuánto cuesta') || lowerMessage.includes('costo')) {
+            return "Nuestros paquetes varían en precio para adaptarse a diferentes presupuestos, desde $235 en El Salvador hasta $440 en Guatemala.";
+        }
+        if (lowerMessage.includes('reservar') || lowerMessage.includes('reserva') || lowerMessage.includes('booking')) {
+            return "Para reservar, simplemente haz clic en 'Ver detalles' en el paquete que te interesa y luego en 'Reservar Ahora'. También puedes contactarnos directamente al +503 7121-9072. ¿Necesitas ayuda para elegir un paquete?";
+        }
+        if (lowerMessage.includes('contacto') || lowerMessage.includes('teléfono') || lowerMessage.includes('ubicación')) {
+            return "Puedes contactarnos al +503 7121-9072. Nuestra oficina está ubicada en la Universidad Tecnológica de El Salvador. ¡Estamos para ayudarte!";
+        }
+        if (lowerMessage.includes('sostenible') || lowerMessage.includes('ecológico') || lowerMessage.includes('medio ambiente')) {
+            return "En Green Travel, la sostenibilidad es nuestro pilar. Trabajamos con alojamientos ecológicos, apoyamos a comunidades locales y diseñamos viajes que minimizan el impacto ambiental. Cada aventura con nosotros es un paso hacia un turismo más responsable.";
+        }
+        if (lowerMessage.includes('hola') || upperMessage.includes('Hola')){
+            return "Bienvenido a Green Travel tu web de reservas de confianza"
+        }
+        // Respuesta por defecto
+        return "Gracias por tu pregunta. Puedo ayudarte con información sobre nuestros destinos como El Imposible, Maldivas, Kyoto, Guatemala, Costa Rica o Marruecos. También puedes preguntarme sobre precios, reservas o nuestro compromiso con el turismo sostenible. ¿Qué te gustaría saber?";
+    }
+
+    // --- FUNCIONES DE INTERFAZ (sin cambios) ---
+    function addMessage(text, sender) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', `${sender}-message`);
+        const messageContent = document.createElement('div');
+        messageContent.classList.add('message-content');
+        messageContent.textContent = text;
+        messageElement.appendChild(messageContent);
+        chatbotMessages.appendChild(messageElement);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+        const typingElement = document.createElement('div');
+        typingElement.classList.add('typing-indicator');
+        typingElement.id = 'typing-indicator';
+        for (let i = 0; i < 3; i++) {
+            const dot = document.createElement('span');
+            typingElement.appendChild(dot);
+        }
+        chatbotMessages.appendChild(typingElement);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) typingIndicator.remove();
+    }
+
+    // Enviar sugerencia predefinida
+    window.sendSuggestion = function(suggestion) {
+        chatbotInput.value = suggestion;
+        sendMessage();
+    };
 });
