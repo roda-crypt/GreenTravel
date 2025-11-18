@@ -4,30 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Travel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-        <!-- Header con menú -->
-    <header id="header">
-        <nav>
-            <div class="logo" id="logo">
-                <!-- Logo circular para el header -->
-                <img src="https://png.pngtree.com/png-vector/20250115/ourmid/pngtree-vibrant-animated-airplane-icon-featuring-bright-colors-dynamic-style-and-simplistic-png-image_15186772.png" alt="Green Travel" class="logo-image">
+    <!-- Header Moderno -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#home" class="logo" id="logo">
+                <img src="img/logo.jpg" alt="Green Travel Logo" class="logo-image">
                 <span class="logo-text">Green Travel</span>
+            </a>
+
+            <!-- Navegación Principal -->
+            <nav class="main-navigation" id="mainNavigation">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Sección de Autenticación (Mi Cuenta / Usuario) -->
+            <div class="header-actions">
+                <div id="authSection">
+                    <!-- Estado: No logueado -->
+                    <button id="authButton" class="btn-primary">
+                        <i class="fas fa-user"></i> Mi Cuenta
+                    </button>
+                    <!-- Estado: Logueado (Menú Desplegable) -->
+                    <div id="userSection" style="display: none;" class="user-dropdown">
+                        <button id="userMenuButton" class="user-menu-button">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="usernameDisplay"></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="userDropdownMenu" class="user-dropdown-menu">
+                            <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
+                            <a href="#"><i class="fas fa-clipboard-list"></i> Mis Reservas</a>
+                            <hr class="dropdown-divider">
+                            <a href="#" id="logoutLink"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botón Menú Móvil -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><button class="btn-primary"><i class="fas fa-user"></i> Mi Cuenta</button></li>
-            </ul>
-            <div class="mobile-menu" id="mobileMenu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -113,12 +144,10 @@
         </div>
         <div class="filter-tags">
             <div class="filter-tag active" data-filter="all">Todos</div>
-            <div class="filter-tag" data-filter="playa">Playa</div>
             <div class="filter-tag" data-filter="montaña">Montaña</div>
             <div class="filter-tag" data-filter="ciudad">Ciudad</div>
             <div class="filter-tag" data-filter="aventura">Aventura</div>
             <div class="filter-tag" data-filter="cultural">Cultural</div>
-            <div class="filter-tag" data-filter="romantico">Romántico</div>
             <div class="filter-tag" data-filter="familiar">Familiar</div>
         </div>
     </section>
@@ -133,21 +162,21 @@
             <!-- Tarjeta 1 -->
             <div class="travel-card" data-category="aventura montaña">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/trekking-peru/400/300" alt="Trekking en Perú">
+                    <img src="img/4.png" alt="Trekking en Perú">
                     <div class="travel-card-badge">Popular</div>
                 </div>
                 <div class="travel-card-content">
-                    <h3 class="travel-card-title">Trekking por el Camino Inca</h3>
+                    <h3 class="travel-card-title">Ruta Mistica: Tour Parque Nacional El Imposible y Ruta El Naranjal</h3>
                     <div class="travel-card-location">
-                        <i class="fas fa-map-marker-alt"></i> Cusco, Perú
+                        <i class="fas fa-map-marker-alt"></i> Aguachapan, El Salvador
                     </div>
                     <p class="travel-card-description">
-                        Explora las ruinas incas mientras caminas por el famoso Camino Inca hasta llegar a Machu Picchu. Una experiencia inolvidable con guías locales expertos.
+                        Explora la belleza natural de El Salvador en este tour combinado que te llevará al Parque Nacional El Imposible y la espectacular Ruta El Naranjal.
                     </p>
                     <div class="travel-card-features">
                         <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Naturaleza</span>
                         <span class="travel-card-feature">Montaña</span>
-                        <span class="travel-card-feature">Cultural</span>
                     </div>
                     <div class="travel-card-rating">
                         <i class="fas fa-star"></i>
@@ -155,66 +184,63 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
-                        <span>4.8 (125 reseñas)</span>
+                        <span>4.7 (85 reseñas)</span>
                     </div>
                     <div class="travel-card-footer">
-                        <div class="travel-card-price">$899 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Trekking por el Camino Inca', 'https://picsum.photos/seed/trekking-peru/800/400', 'Explora las ruinas incas mientras caminas por el famoso Camino Inca hasta llegar a Machu Picchu. Una experiencia inolvidable con guías locales expertos.', '7 días / 6 noches', '2-12 personas', 'Alojamientos ecológicos', 'Desayuno incluido', '$899', 'https://www.google.com/maps/d/embed?mid=1EHneG2oyCN8mYDzEtIQGPnv08Ge9YMk&hl=es&ehbc=2E312F', 'itin1')">Ver detalles</button>
+                        <div class="travel-card-price">$235 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Tour Parque Nacional El Imposible y Ruta El Naranjal', 'img/4.png', 'Explora la belleza natural de El Salvador en este tour combinado que te llevará al Parque Nacional El Imposible y la espectacular Ruta El Naranjal.', '3 días / 2 noches', '2-8 personas', 'Eco-Lodge y posada local', '3 desayunos, 3 almuerzos, 2 cenas', '$235', 'https://www.google.com/maps/d/embed?mid=1pYlsur7pWcQt1VNDU2-wy78UpnT5xAs&hl=es&ehbc=2E312F', 'itin1')">Ver detalles</button>
                     </div>
                 </div>
             </div>
             
             <!-- Tarjeta 2 -->
-            <div class="travel-card" data-category="playa romantico">
+            <div class="travel-card" data-category="montaña aventura naturaleza">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/maldivas-ecologicas/400/300" alt="Maldivas Ecológicas">
-                    <div class="travel-card-badge">Oferta</div>
+                    <img src="img/3.png" alt="Espejo Verde entre Gigantes Extremos">
+                    <div class="travel-card-badge">Popular</div>
                 </div>
                 <div class="travel-card-content">
-                    <h3 class="travel-card-title">Paraíso en Maldivas Sostenibles</h3>
+                    <h3 class="travel-card-title">Espejo Verde entre Gigantes Extremos</h3>
                     <div class="travel-card-location">
-                        <i class="fas fa-map-marker-alt"></i> Maldivas
+                        <i class="fas fa-map-marker-alt"></i> Complejo Volcánico, El Salvador
                     </div>
                     <p class="travel-card-description">
-                        Disfruta de las aguas cristalinas de Maldivas en resorts ecológicos que protegen los arrecifes de coral y la vida marina.
+                        Una aventura inolvidable por los imponentes volcanes de Santa Ana e Izalco, culminando en la serena belleza de la Laguna Verde. Ideal para amantes de la naturaleza y el senderismo.
                     </p>
                     <div class="travel-card-features">
-                        <span class="travel-card-feature">Playa</span>
-                        <span class="travel-card-feature">Romántico</span>
-                        <span class="travel-card-feature">Lujo Sostenible</span>
+                        <span class="travel-card-feature">Montaña</span>
+                        <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Naturaleza</span>
                     </div>
                     <div class="travel-card-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>5.0 (89 reseñas)</span>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8 (120 reseñas)</span>
                     </div>
                     <div class="travel-card-footer">
-                        <div class="travel-card-price">$1,599 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Paraíso en Maldivas Sostenibles', 'https://picsum.photos/seed/maldivas-ecologicas/800/400', 'Disfruta de las aguas cristalinas de Maldivas en resorts ecológicos que protegen los arrecifes de coral y la vida marina.', '5 días / 4 noches', '2 personas', 'Resort ecológico de lujo', 'Todo incluido', '$1,599', 'https://www.google.com/maps/d/embed?mid=1EHneG2oyCN8mYDzEtIQGPnv08Ge9YMk&hl=es&ehbc=2E312F', 'itin2')">Ver detalles</button>
+                        <div class="travel-card-price">$299 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Espejo Verde entre Gigantes Extremos', 'img/3.png', 'Una aventura inolvidable por los imponentes volcanes de Santa Ana e Izalco, culminando en la serena belleza de la Laguna Verde. Ideal para amantes de la naturaleza y el senderismo.', '3 días / 2 noches', '2-8 personas', 'Hotel boutique y cabañas rústicas', 'Alimentación completa', '$299', 'https://www.google.com/maps/d/embed?mid=11LZslNNTYkTY45op7d6ba1qt6-2tu_U&hl=es&ehbc=2E312F', 'itin2')">Ver detalles</button>
                     </div>
                 </div>
             </div>
-            
             <!-- Tarjeta 3 -->
             <div class="travel-card" data-category="cultural ciudad">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/kyoto-sostenible/400/300" alt="Kyoto Sostenible">
+                    <img src="img/5.png" alt="Kyoto Sostenible">
                 </div>
                 <div class="travel-card-content">
-                    <h3 class="travel-card-title">Tradiciones Sostenibles en Kyoto</h3>
+                    <h3 class="travel-card-title">Visita a Lago Petén Itzá y Laguna Lachuá</h3>
                     <div class="travel-card-location">
-                        <i class="fas fa-map-marker-alt"></i> Kyoto, Japón
+                        <i class="fas fa-map-marker-alt"></i> San Salvador - Guatemala
                     </div>
                     <p class="travel-card-description">
-                        Sumérgete en la cultura japonesa mientras visitas templos ancestrales y participas en talleres de artesanía tradicional sostenible.
-                    </p>
+                        El Lago Petén Itzá y la Laguna Lachuá te invitan a descubrir dos paraísos naturales únicos en Guatemala. Petén Itzá sorprende con sus aguas turquesa, pueblos llenos de historia maya y paisajes que enamoran a primera vista. Lachuá, escondida en la selva, deslumbra con su forma perfecta y aguas cristalinas que parecen un espejo natural. Dos destinos mágicos, ideales para desconectar, explorar y dejarse sorprender por la belleza pura de la naturaleza.                    </p>
                     <div class="travel-card-features">
-                        <span class="travel-card-feature">Cultural</span>
+                        <span class="travel-card-feature">Aventura</span>
                         <span class="travel-card-feature">Ciudad</span>
-                        <span class="travel-card-feature">Experiencias Locales</span>
                     </div>
                     <div class="travel-card-rating">
                         <i class="fas fa-star"></i>
@@ -225,16 +251,16 @@
                         <span>4.7 (156 reseñas)</span>
                     </div>
                     <div class="travel-card-footer">
-                        <div class="travel-card-price">$1,299 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Tradiciones Sostenibles en Kyoto', 'https://picsum.photos/seed/kyoto-sostenible/800/400', 'Sumérgete en la cultura japonesa mientras visitas templos ancestrales y participas en talleres de artesanía tradicional sostenible.', '6 días / 5 noches', '2-8 personas', 'Hoteles tradicionales', 'Desayuno incluido', '$1,299', 'https://www.google.com/maps/d/embed?mid=1EHneG2oyCN8mYDzEtIQGPnv08Ge9YMk&hl=es&ehbc=2E312F', 'itin3')">Ver detalles</button>
+                        <div class="travel-card-price">$440.00 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Visita a Lago Petén Itzá y Laguna Lachuá', 'img/5.png', 'El Lago Petén Itzá y la Laguna Lachuá te invitan a descubrir dos paraísos naturales únicos en Guatemala. Petén Itzá sorprende con sus aguas turquesa, pueblos llenos de historia maya y paisajes que enamoran a primera vista. Lachuá, escondida en la selva, deslumbra con su forma perfecta y aguas cristalinas que parecen un espejo natural. Dos destinos mágicos, ideales para desconectar, explorar y dejarse sorprender por la belleza pura de la naturaleza.', '5 días / 4 noches', 'por persona', 'Hotel 3 estrellas', 'Desayuno incluido', '$440.00', 'https://www.google.com/maps/d/embed?mid=1VUYoB_2k-0LV6B6yj6NJKjQUJrnqHFY&hl=es&ehbc=2E312F', 'itin3')">Ver detalles</button>
                     </div>
                 </div>
             </div>
             
             <!-- Tarjeta 4 -->
-            <div class="travel-card" data-category="cultural aventura">
+            <div class="travel-card" data-category="aventura familiar">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/antigua-hobbitenango/400/300" alt="Ruta Mágica: Antigua y Hobbitenango">
+                    <img src="img/RutaMagicaHistoriayFantasia.jpg" alt="Ruta Mágica: Antigua y Hobbitenango">
                     <div class="travel-card-badge">Popular</div>
                 </div>
                 <div class="travel-card-content">
@@ -246,7 +272,6 @@
                         Combina la riqueza colonial de Antigua con la experiencia única en Hobbitenango. Un viaje mágico entre historia y fantasía en el corazón de Guatemala.
                     </p>
                     <div class="travel-card-features">
-                        <span class="travel-card-feature">Cultural</span>
                         <span class="travel-card-feature">Aventura</span>
                         <span class="travel-card-feature">Fantasía</span>
                     </div>
@@ -260,7 +285,7 @@
                     </div>
                     <div class="travel-card-footer">
                         <div class="travel-card-price">$480 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Ruta Mágica: Entre Historia y Fantasía', 'https://picsum.photos/seed/antigua-hobbitenango/800/400', 'Combina la riqueza colonial de Antigua con la experiencia única en Hobbitenango. Un viaje mágico entre historia y fantasía en el corazón de Guatemala.', '3 días / 2 noches', '2-8 personas', 'Hotel boutique y cabaña temática', 'Desayunos y almuerzos incluidos', '$480', 'https://www.google.com/maps/d/embed?mid=1rZ4NHnKzSgQYX_mEpuOzSwlY9SgXpvA&hl=es&ehbc=2', 'itin4')">Ver detalles</button>
+                        <button class="btn-primary" onclick="openModal('Ruta Mágica: Entre Historia y Fantasía', 'img/RutaMagicaHistoriayFantasia.jpg', 'Combina la riqueza colonial de Antigua con la experiencia única en Hobbitenango. Un viaje mágico entre historia y fantasía en el corazón de Guatemala.', '3 días / 2 noches', '2-8 personas', 'Hotel boutique y cabaña temática', 'Desayunos y almuerzos incluidos', '$480', 'https://www.google.com/maps/d/embed?mid=1rZ4NHnKzSgQYX_mEpuOzSwlY9SgXpvA&hl=es&ehbc=2', 'itin4')">Ver detalles</button>
                     </div>
                 </div>
             </div>
@@ -268,19 +293,17 @@
             <!-- Tarjeta 5 -->
             <div class="travel-card" data-category="familiar montaña">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/costa-rica-familia/400/300" alt="Costa Rica Familiar">
+                    <img src="img/2.png" alt="Costa Rica Familiar">
                 </div>
                 <div class="travel-card-content">
-                    <h3 class="travel-card-title">Aventura Familiar en Costa Rica</h3>
+                    <h3 class="travel-card-title">Escapada a Tikal</h3>
                     <div class="travel-card-location">
-                        <i class="fas fa-map-marker-alt"></i> San José, Costa Rica
+                        <i class="fas fa-map-marker-alt"></i> San Salvador - Guatemala
                     </div>
                     <p class="travel-card-description">
-                        Descubre la biodiversidad de Costa Rica con actividades para toda la familia: canopy, observación de volcanes y relajación en aguas termales.
-                    </p>
+                        Tikal, Río Dulce y el Castillo de San Felipe forman un recorrido inolvidable por la historia, la naturaleza y la magia de Guatemala. Tikal te transporta al corazón del mundo maya con imponentes templos que emergen entre la selva y una energía ancestral que se siente en cada rincón. Río Dulce sorprende con sus aguas tranquilas, su exuberante vegetación y la calidez de sus comunidades ribereñas, creando un ambiente perfecto para relajarse y conectar con la naturaleza. Finalmente, el Castillo de San Felipe, vigilante histórico a la entrada del lago, cautiva con su arquitectura colonial y sus historias de piratas. Tres destinos llenos de encanto que combinan aventura, cultura y paisajes extraordinarios.                    </p>
                     <div class="travel-card-features">
                         <span class="travel-card-feature">Familiar</span>
-                        <span class="travel-card-feature">Montaña</span>
                         <span class="travel-card-feature">Naturaleza</span>
                     </div>
                     <div class="travel-card-rating">
@@ -292,29 +315,29 @@
                         <span>4.2 (98 reseñas)</span>
                     </div>
                     <div class="travel-card-footer">
-                        <div class="travel-card-price">$1,199 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Aventura Familiar en Costa Rica', 'https://picsum.photos/seed/costa-rica-familia/800/400', 'Descubre la biodiversidad de Costa Rica con actividades para toda la familia: canopy, observación de volcanes y relajación en aguas termales.', '7 días / 6 noches', '2-6 personas', 'Eco-resorts familiares', 'Desayuno y cena', '$1,199', 'https://www.google.com/maps/d/embed?mid=1EHneG2oyCN8mYDzEtIQGPnv08Ge9YMk&hl=es&ehbc=2E312F', 'itin5')">Ver detalles</button>
+                        <div class="travel-card-price">$345.22 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Escapada a Tikal', 'img/2.png', 'Tikal, Río Dulce y el Castillo de San Felipe forman un recorrido inolvidable por la historia, la naturaleza y la magia de Guatemala. Tikal te transporta al corazón del mundo maya con imponentes templos que emergen entre la selva y una energía ancestral que se siente en cada rincón. Río Dulce sorprende con sus aguas tranquilas, su exuberante vegetación y la calidez de sus comunidades ribereñas, creando un ambiente perfecto para relajarse y conectar con la naturaleza. Finalmente, el Castillo de San Felipe, vigilante histórico a la entrada del lago, cautiva con su arquitectura colonial y sus historias de piratas. Tres destinos llenos de encanto que combinan aventura, cultura y paisajes extraordinarios.', '3 días / 2 noches', '1-3 personas', 'Hotel Catamaran', 'Desayuno y cena', '$345.22', 'https://www.google.com/maps/d/embed?mid=19vgf9fXKeHDDl7lJzfIQf061GENWKy8&hl=es&ehbc=2E312F', 'itin5')">Ver detalles</button>
                     </div>
                 </div>
             </div>
             
             <!-- Tarjeta 6 -->
-            <div class="travel-card" data-category="cultural ciudad">
+            <div class="travel-card" data-category="naturaleza playa">
                 <div class="travel-card-image">
-                    <img src="https://picsum.photos/seed/marruecos-sostenible/400/300" alt="Marruecos Sostenible">
+                    <img src="https://picsum.photos/seed/el-salvador-naturaleza/400/300" alt="Conexión con la naturaleza verde y salvaje">
                 </div>
                 <div class="travel-card-content">
-                    <h3 class="travel-card-title">Rutas Sostenibles por Marruecos</h3>
+                    <h3 class="travel-card-title">Conexión con la naturaleza verde y salvaje</h3>
                     <div class="travel-card-location">
-                        <i class="fas fa-map-marker-alt"></i> Marrakech, Marruecos
+                        <i class="fas fa-map-marker-alt"></i> Ecoparque Santa Rita y Barra de Santiago, El Salvador
                     </div>
                     <p class="travel-card-description">
-                        Explora los zocos, el desierto del Sahara y las montañas del Atlas mientras apoyas a comunidades locales y proyectos de conservación.
+                        Explora la biodiversidad de El Salvador en el Ecoparque Santa Rita y disfruta de los manglares de Barra de Santiago.
                     </p>
                     <div class="travel-card-features">
-                        <span class="travel-card-feature">Cultural</span>
-                        <span class="travel-card-feature">Ciudad</span>
-                        <span class="travel-card-feature">Desierto</span>
+                        <span class="travel-card-feature">Naturaleza</span>
+                        <span class="travel-card-feature">Playa</span>
+                        <span class="travel-card-feature">Aventura</span>
                     </div>
                     <div class="travel-card-rating">
                         <i class="fas fa-star"></i>
@@ -322,15 +345,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
-                        <span>4.6 (142 reseñas)</span>
+                        <span>4.7 (89 reseñas)</span>
                     </div>
                     <div class="travel-card-footer">
-                        <div class="travel-card-price">$999 <span>por persona</span></div>
-                        <button class="btn-primary" onclick="openModal('Rutas Sostenibles por Marruecos', 'https://picsum.photos/seed/marruecos-sostenible/800/400', 'Explora los zocos, el desierto del Sahara y las montañas del Atlas mientras apoyas a comunidades locales y proyectos de conservación.', '9 días / 8 noches', '4-12 personas', 'Riads y kasbahs', 'Desayuno incluido', '$999', 'https://www.google.com/maps/d/embed?mid=1EHneG2oyCN8mYDzEtIQGPnv08Ge9YMk&hl=es&ehbc=2E312F', 'itin6')">Ver detalles</button>
+                        <div class="travel-card-price">$309 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Conexión con la naturaleza verde y salvaje', 'https://picsum.photos/seed/el-salvador-naturaleza/800/400', 'Explora la biodiversidad de El Salvador en el Ecoparque Santa Rita y disfruta de los manglares de Barra de Santiago.', '3 días / 2 noches', '4-10 personas', 'Hoteles locales', 'Desayuno incluido', '$309', 'https://www.google.com/maps/d/embed?mid=1TazrRUR3flNgzhGr6TGJ_z_C_tGURb8&hl=es&ehbc=2E312F', 'itin6')">Ver detalles</button>
                     </div>
                 </div>
             </div>
-        </div>
         <div style="text-align: center; margin-top: 2rem;">
             <button class="btn-primary" onclick="loadMore()">
                 <i class="fas fa-plus-circle"></i> Cargar Más
@@ -451,7 +473,108 @@
         <span id="toastMessage">Acción completada con éxito</span>
     </div>
 
+    <!-- Modal de Autenticación (Login / Registro) -->
+    <div class="modal" id="authModal">
+        <div class="modal-content auth-modal-content">
+            <div class="modal-close" id="authModalCloseBtn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="auth-header">
+                <h2 id="authModalTitle">Bienvenido a Green Travel</h2>
+            </div>
+
+            <!-- Pestañas de Login y Registro -->
+            <ul class="nav nav-tabs auth-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#loginTab">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#registerTab">Crear Cuenta</a>
+                </li>
+            </ul>
+
+            <!-- Contenido de las Pestañas -->
+            <div class="tab-content auth-tab-content">
+                <!-- Pestaña de Iniciar Sesión -->
+                <div class="tab-pane fade show active" id="loginTab">
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <input type="text" id="loginUsername" class="form-input" required>
+                            <label for="loginUsername" class="form-label">Nombre de Usuario</label>
+                        </div>
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <input type="password" id="loginPassword" class="form-input" required>
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Entrar</button>
+                    </form>
+                </div>
+
+                <!-- Pestaña de Crear Cuenta -->
+                <div class="tab-pane fade" id="registerTab">
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <input type="text" id="registerUsername" class="form-input" required>
+                            <label for="registerUsername" class="form-label">Elige un Nombre de Usuario</label>
+                        </div>
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <input type="password" id="registerPassword" class="form-input" required>
+                            <label for="registerPassword" class="form-label">Crea una Contraseña</label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Crear Cuenta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- =                 CHATBOT HTML                               = -->
+    <!-- ============================================================= -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar"><i class="fas fa-plane"></i></div>
+            <div class="chatbot-title">
+                <h3>Asistente Green Travel</h3>
+                <span class="status-indicator online"></span>
+            </div>
+            <button class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-content">¡Hola! Soy tu asistente de Green Travel. Estoy aquí para ayudarte a encontrar el destino perfecto para tu próxima aventura sostenible. ¿En qué puedo ayudarte hoy?</div>
+            </div>
+        </div>
+        <div class="chatbot-suggestions" id="chatbotSuggestions">
+            <button class="suggestion-btn" onclick="sendSuggestion('Viajes familiares')">Viajes familiares</button>
+            <button class="suggestion-btn" onclick="sendSuggestion('Turismo sostenible')">Turismo sostenible</button>
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta aquí..." />
+            <button id="chatbotSendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="chatbot-bubble" id="chatbotBubble">
+        <i class="fas fa-comments"></i>
+        <span>¿Necesitas ayuda?</span>
+    </div>
+
+    <!-- Scripts al final del body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
