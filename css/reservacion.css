@@ -1,0 +1,144 @@
+/* --- Contenedor Principal de la Tarjeta de Reserva --- */
+.my-reservations-modal-content .reservation-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef; /* Un gris muy suave */
+    border-radius: 12px; /* Bordes más redondeados para un look moderno */
+    padding: 1.5rem 2rem; /* Más padding interno para una sensación de amplitud */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Sombra suave y difuminada */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease; /* Transición suave y profesional */
+    position: relative; /* Necesario para el elemento decorativo */
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+/* Efecto Hover Profesional */
+.my-reservations-modal-content .reservation-card:hover {
+    transform: translateY(-5px); /* Elevación sutil al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada en hover */
+}
+
+/* --- Sección de Detalles (Izquierda) --- */
+.my-reservations-modal-content .reservation-details {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    padding-right: 1.5rem; /* Espacio entre detalles y el estado */
+}
+
+.my-reservations-modal-content .reservation-details h4 {
+    margin: 0 0 0.75rem 0;
+    font-family: var(--font-headings, 'Montserrat', sans-serif); /* Usa la fuente de títulos */
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-color, #333333); /* Color de texto principal */
+    line-height: 1.3;
+}
+
+.my-reservations-modal-content .reservation-details p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+    color: #6c757d; /* Un gris para el texto secundario */
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.my-reservations-modal-content .reservation-details p i {
+    margin-right: 0.75rem;
+    color: var(--primary-color, #008080); /* Color principal para los iconos */
+    font-size: 0.85rem;
+    width: 16px; /* Ancho fijo para alinear perfectamente el texto */
+    text-align: center;
+}
+
+/* --- Sección de Estado (Derecha) --- */
+.my-reservations-modal-content .reservation-status {
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #ffc107; /* Amarillo para 'Pendiente' */
+    box-shadow: 0 2px 5px rgba(255, 193, 7, 0.4); /* Sombra sutil que coincide con el color */
+    white-space: nowrap;
+    flex-shrink: 0; /* Evita que el estado se encoja */
+}
+
+.my-reservations-modal-content .reservation-status.confirmed {
+    background-color: #28a745; /* Verde para 'Confirmada' */
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.4);
+}
+
+/* --- Elemento Decorativo (Línea de Color) --- */
+.my-reservations-modal-content .reservation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color, #008080), var(--secondary-color, #A0522D));
+    opacity: 0.8;
+}
+
+/* --- Estilo para pantallas pequeñas (Responsive) --- */
+@media (max-width: 768px) {
+    .my-reservations-modal-content .reservation-card {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear al inicio en móvil */
+        padding: 1.25rem 1.5rem;
+    }
+
+    .my-reservations-modal-content .reservation-details {
+        padding-right: 0;
+        padding-bottom: 1rem; /* Espacio entre detalles y estado */
+        width: 100%;
+        border-bottom: 1px solid #e9ecef; /* Línea divisoria en móvil */
+    }
+
+    .my-reservations-modal-content .reservation-status {
+        align-self: flex-end; /* Mover el estado a la derecha en móvil */
+        margin-top: 1rem;
+    }
+}
+/* --- Contenedor del Título y Imagen (NUEVO) --- */
+.my-reservations-modal-content .reservation-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Espacio debajo del título/imagen */
+}
+
+.my-reservations-modal-content .reservation-header img {
+    width: 55px; /* Tamaño de la imagen */
+    height: 55px;
+    border-radius: 10px; /* Bordes redondeados modernos */
+    margin-right: 1rem; /* Espacio entre imagen y título */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    border: 2px solid #f0f0f0; /* Un borde sutil y elegante */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil en la imagen */
+}
+
+.my-reservations-modal-content .reservation-header h4 {
+    margin: 0; /* Quitamos el margen por defecto del h4 para alinear bien */
+    font-family: var(--font-headings, 'Montserrat', sans-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-color, #333333);
+    line-height: 1.2;
+}
+
+/* --- Ajustes para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .my-reservations-modal-content .reservation-header img {
+        width: 45px;
+        height: 45px;
+        margin-right: 0.8rem;
+    }
+
+    .my-reservations-modal-content .reservation-header h4 {
+        font-size: 1.1rem; /* Ligeramente más pequeño en móvil */
+    }
+}
